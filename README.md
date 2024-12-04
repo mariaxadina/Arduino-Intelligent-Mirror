@@ -9,6 +9,7 @@
 7. [Source Code](#Source-Code)
 8. [Journal](#Journal)
 9. [Bibliography/Resources](#Bibliography/Resources)
+10. [License](#License)
     
  ## Introduction
  
@@ -37,5 +38,8 @@ The project is developed using **PlatformIO**, which provides an integrated buil
 - **images/**: Contains project images linked in this README. 
 
 ## Journal
+**12/3/2024**: Started documenting the Intelligent Mirror project, focusing on initial setup and planning.
 
 ## Bibliography/Resources
+
+## License
