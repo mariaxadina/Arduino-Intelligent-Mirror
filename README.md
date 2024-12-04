@@ -1,5 +1,15 @@
 # Intelligent Mirror
- 
+ ## Table of Contents
+1. [Introduction](#introduction)
+2. [General Description](#General-Description)
+3. [Hardware Design](#Hardware-Design)
+4. [Software Design](#Software-Design)
+5. [Results](#Results)
+6. [Conclusions](#Conclusions)
+7. [Source Code](#Source-Code)
+8. [Journal](#Journal)
+9. [Bibliography/Resources](#Bibliography/Resources)
+    
  ## Introduction
  
  This project is an intelligent mirror that lights up upon detecting movement and offers various functionalities such as LED lighting, an alarm-setting mode, inspirational quotes displayed on an LCD, and music played through a buzzer. The main goal is to create a smart, multifunctional mirror that enhances daily routines by combining practicality and motivation in one device. 
