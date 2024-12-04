@@ -43,3 +43,4 @@ The project is developed using **PlatformIO**, which provides an integrated buil
 ## Bibliography/Resources
 
 ## License
+This project is licensed under the [MIT License](./LICENSE).
