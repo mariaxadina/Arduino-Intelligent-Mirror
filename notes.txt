@@ -1,0 +1,4 @@
+Butoane:
+- muzica: la o apasare porneste muzica, la inca una se opeste
+- alarma: la o apasare setezi cate minute sa fie alarma
+~buton 3: pornire/oprire: countdown pe ecran.
