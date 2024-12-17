@@ -19,9 +19,9 @@
 
 ## General Description
 ### Block Diagram
-<p>
-  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/images/scheme.jpg" width="300"/>
-</p>
+<a>
+  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/scheme.jpg" width="300"/>
+</a>
 
 ### Detailed Description of Hardware Functionality
 **1. Microcontroller - ATmega328P**
@@ -73,9 +73,9 @@ The power supply uses a USB 2.0 A/B cable connected to the laptop, delivering 5V
 
 
 ### Circuit Schematic  
-<p>
-  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/images/tinkercad.png" width="300"/>
-</p>
+<a>
+  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/tinkercad.png" width="300"/>
+</a>
 
 ## Software Design
 
