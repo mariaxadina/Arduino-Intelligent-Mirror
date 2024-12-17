@@ -20,7 +20,7 @@
 ## General Description
 ### Block Diagram
 <p>
-  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/images/scheme.png" width="300"/>
+  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/images/scheme.jpg" width="300"/>
 </p>
 
 ### Detailed Description of Hardware Functionality
@@ -74,7 +74,7 @@ The power supply uses a USB 2.0 A/B cable connected to the laptop, delivering 5V
 
 ### Circuit Schematic  
 <p>
-  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/images/tinkercad.jpg" width="300"/>
+  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/images/tinkercad.png" width="300"/>
 </p>
 
 ## Software Design
