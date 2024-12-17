@@ -18,7 +18,10 @@
  The idea originated from the desire to merge technology with everyday objects, transforming a simple mirror into a useful and interactive tool. This project is beneficial for others by offering a modern, functional home accessory that makes mornings more efficient and motivating.
 
 ## General Description
-### Block Scheme
+### Block Diagram
+<p>
+  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/images/scheme.png" width="300"/>
+</p>
 
 ### Detailed Description of Hardware Functionality
 **1. Microcontroller - ATmega328P**
@@ -70,8 +73,12 @@ The power supply uses a USB 2.0 A/B cable connected to the laptop, delivering 5V
 
 
 ### Circuit Schematic  
+<p>
+  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/images/tinkercad.jpg" width="300"/>
+</p>
 
 ## Software Design
+
 ### Development Environment  
 The project is developed using **PlatformIO**, which provides an integrated build system, library manager, and support for multiple boards and frameworks.  
 
@@ -87,6 +94,10 @@ The project is developed using **PlatformIO**, which provides an integrated buil
 
 ## Journal
 **12/3/2024**: Started documenting the Intelligent Mirror project, focusing on initial setup and planning.
+
+**12/10/2024**: Implemented the hardware components of the Intelligent Mirror, including the PIR motion sensor, LCD display, speaker, buttons, and power supply.
+
+**12/17/2024**: Completed the circuit schematic, block diagram, and detailed hardware description for the documentation.
 
 ## Bibliography/Resources
 
