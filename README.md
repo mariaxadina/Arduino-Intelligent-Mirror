@@ -20,7 +20,7 @@
 ## General Description
 ### Block Diagram
 <a>
-  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/scheme.jpg" width="300"/>
+  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/scheme.jpg" width="500"/>
 </a>
 
 ### Detailed Description of Hardware Functionality
@@ -74,14 +74,14 @@ The power supply uses a USB 2.0 A/B cable connected to the laptop, delivering 5V
 
 ### Circuit Schematic  
 <a>
-  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/tinkercad.png" width="300"/>
+  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/tinkercad.png" width="800"/>
 </a>
 
 ### Connected Components
 <a>
-  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/hardware1.jpg" width="300"/>
-  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/hardware2.jpg" width="300"/>
-  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/hardware_test.jpg" width="300"/>
+  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/hardware1.jpg" width="500"/>
+  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/hardware2.jpg" width="500"/>
+  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/hardware_test.jpg" width="500"/>
 </a>
 
 ## Software Design
