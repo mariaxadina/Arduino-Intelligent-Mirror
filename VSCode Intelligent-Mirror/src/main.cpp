@@ -31,6 +31,9 @@ void setup() {
   pinMode(MUSIC_BTN, INPUT_PULLUP);
   pinMode(SET_ALARM_BTN, INPUT_PULLUP);
   pinMode(START_STOP_ALARM_BTN, INPUT_PULLUP);
+
+  lcd.setCursor(0, 0);
+  lcd.print("Hello,world!");
   
 }
 
