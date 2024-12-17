@@ -21,23 +21,23 @@
 ### Block Scheme
 
 ### Detailed Description of Hardware Functionality
-1. Microcontroller - ATmega328P
+**1. Microcontroller - ATmega328P**
 
 ATmega328P is an 8-bit microcontroller based on the AVR architecture, commonly used in Arduino boards. It operates at 5V with a clock speed of up to 16 MHz.The ATmega328P features 23 GPIO pins, supporting digital I/O, PWM, and analog input. It includes communication interfaces like SPI, I2C, and UART, making it ideal for embedded systems, sensors, and small IoT applications due to its low power consumption and versatility.
 
-2. PIR Motion Sensor
+**2. PIR Motion Sensor**
 
 The PIR Motion Sensor detects movement and triggers the LED strip across the mirror to turn on. It operates on 5V and outputs a digital HIGH signal when motion is detected. The sensor is connected to GPIO pin 7 of the ATmega328P, which monitors the signal to activate the LEDs.
 
-3. LCD Display (I2C)
+**3. LCD Display (I2C)**
 
 The 16x2 I2C LCD Display is used to show alarm settings and countdown. It connects to the ATmega328P via I2C for simplified communication. A potentiometer is connected to the LCD's V0 pin to adjust contrast, while GPIO pins 2, 3, 4, and 5 control the display functions. It operates at 5V and provides clear text output for user interaction.
 
-4. Speaker
+**4. Speaker**
 
 The speaker is used to play music and sound an alarm when the countdown reaches zero, allowing tone generation and control. The speaker operates at 5V and provides audio feedback for the system.
 
-5. Buttons
+**5. Buttons**
    
 The project includes three buttons with pull-up resistors for stable input detection:
 
@@ -49,7 +49,7 @@ The project includes three buttons with pull-up resistors for stable input detec
 
 All buttons use internal pull-up resistors, ensuring reliable operation with active LOW logic.
 
-6. Power Supply
+**6. Power Supply**
 
 The power supply uses a USB 2.0 A/B cable connected to the laptop, delivering 5V to the Arduino.
 
