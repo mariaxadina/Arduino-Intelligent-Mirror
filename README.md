@@ -66,8 +66,8 @@ The power supply uses a USB 2.0 A/B cable connected to the laptop, delivering 5V
 | Arduino ATmega328P     | 1        | Microcontroller board                    | https://www.alldatasheet.com/datasheet-pdf/view/241077/ATMEL/ATMEGA328P.html |
 | Potentiometer          | 1        | 10k Ohm potentiometer                    | https://components101.com/sites/default/files/component_datasheet/potentiometer%20datasheet.pdf                         |
 | Push Buttons           | 3        | Buttons with pull-up resistance          | https://components101.com/sites/default/files/component_datasheet/Push-Button.pdf                 |
-| Resistors (1kΩ)        | 3        | 1k Ohm resistors                         | [Datasheet](https://www.vishay.com/docs/31027/cmfind.pdf)                                      |
-| Resistors (330Ω)       | 1        | 330 Ohm resistor                         | [Datasheet](https://www.vishay.com/docs/31027/cmfind.pdf)                                      |
+| Resistors (1kΩ)        | 3        | 1k Ohm resistors                         |                                       -                                      |
+| Resistors (330Ω)       | 1        | 330 Ohm resistor                         |                                       -                                    |
 | LCD 16x2               | 1        | Character display                        | https://components101.com/sites/default/files/component_datasheet/16x2%20LCD%20Datasheet.pdf                               |
 | PIR Sensor             | 1        | Motion detection sensor                  | https://components101.com/sites/default/files/component_datasheet/Push-Button.pdf                |
 
