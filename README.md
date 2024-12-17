@@ -81,7 +81,7 @@ The power supply uses a USB 2.0 A/B cable connected to the laptop, delivering 5V
 <a>
   <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/hardware1.jpg" width="300"/>
   <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/hardware2.jpg" width="300"/>
-  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/hardware3.jpg" width="300"/>
+  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/hardware_test.jpg" width="300"/>
 </a>
 
 ## Software Design
