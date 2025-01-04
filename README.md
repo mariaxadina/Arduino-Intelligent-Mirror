@@ -107,6 +107,7 @@ The project is developed using **PlatformIO**, which provides an integrated buil
 **12/17/2024**: Completed the circuit schematic, block diagram, and detailed hardware description for the documentation.
 
 ## Bibliography/Resources
-
+1. https://highlowtech.org/?p=1963
+2. https://www.youtube.com/watch?v=tNNycZpvg-Y&ab_channel=AndrobotTECH
 ## License
 This project is licensed under the [MIT License](./LICENSE).
