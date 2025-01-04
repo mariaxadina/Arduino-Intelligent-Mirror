@@ -106,6 +106,8 @@ The project is developed using **PlatformIO**, which provides an integrated buil
 
 **12/17/2024**: Completed the circuit schematic, block diagram, and detailed hardware description for the documentation.
 
+**1/1/2025**: I finalized the hardware assembly, soldering the pins to the LED strip and ensuring all connections were secure. After completing the assembly, I tested the LED strip and the entire hardware setup to confirm everything functions correctly
+
 ## Bibliography/Resources
 1. https://highlowtech.org/?p=1963
 2. https://www.youtube.com/watch?v=tNNycZpvg-Y&ab_channel=AndrobotTECH
