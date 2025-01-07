@@ -89,6 +89,15 @@ The power supply uses a USB 2.0 A/B cable connected to the laptop, delivering 5V
 ### Development Environment  
 The project is developed using **PlatformIO**, which provides an integrated build system, library manager, and support for multiple boards and frameworks.  
 
+### Libraries
+In this project, I used three libraries to manage various components effectively:
+- **LiquidCrystal Library**: In my project, the LiquidCrystal library is responsible for managing the 16x2 LCD, which displays the alarm settings, countdown, and other information.
+- **Adafruit_NeoPixel Library**: In my intelligent mirror project, the NeoPixel library is used to manage the LED strip surrounding the mirror. It creates visual effects and provides illumination by controlling each LED's RGB values independently.
+- **PCM Library**: In the project, the PCM library is used to play sound effects and alarm tones through the speaker, adding auditory feedback and enhancing user interaction. The sounds were edited and optimized in Audacity before being implemented.
+
+### Audio Integration using Audacity and EncodeAudio.exe
+To integrate sound into the project, I started with an MP3 version of the desired audio file. Using Audacity I converted the file into a 16-bit PCM format with an 8000 Hz sampling frequency to ensure compatibility with the Arduino and PCM library. Afterward, I utilized an audio encoder tool to convert the audio into a numeric array format required by the code. The generated data was then copied directly to the clipboard and integrated into the Arduino sketch, allowing the speaker to play the processed sound seamlessly.
+
 ## Results
 
 ## Conclusions
