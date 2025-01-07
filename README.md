@@ -20,7 +20,7 @@
 ## General Description
 ### Block Diagram
 <a>
-  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/scheme.jpg" width="300"/>
+  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/scheme.jpg" width="500"/>
 </a>
 
 ### Detailed Description of Hardware Functionality
@@ -66,22 +66,24 @@ The power supply uses a USB 2.0 A/B cable connected to the laptop, delivering 5V
 | Arduino ATmega328P     | 1        | Microcontroller board                    | https://www.alldatasheet.com/datasheet-pdf/view/241077/ATMEL/ATMEGA328P.html |
 | Potentiometer          | 1        | 10k Ohm potentiometer                    | https://components101.com/sites/default/files/component_datasheet/potentiometer%20datasheet.pdf                         |
 | Push Buttons           | 3        | Buttons with pull-up resistance          | https://components101.com/sites/default/files/component_datasheet/Push-Button.pdf                 |
-| Resistors (1kΩ)        | 3        | 1k Ohm resistors                         | [Datasheet](https://www.vishay.com/docs/31027/cmfind.pdf)                                      |
-| Resistors (330Ω)       | 1        | 330 Ohm resistor                         | [Datasheet](https://www.vishay.com/docs/31027/cmfind.pdf)                                      |
+| Resistors (1kΩ)        | 3        | 1k Ohm resistors                         |                                       -                                      |
+| Resistors (330Ω)       | 1        | 330 Ohm resistor                         |                                       -                                    |
 | LCD 16x2               | 1        | Character display                        | https://components101.com/sites/default/files/component_datasheet/16x2%20LCD%20Datasheet.pdf                               |
 | PIR Sensor             | 1        | Motion detection sensor                  | https://components101.com/sites/default/files/component_datasheet/Push-Button.pdf                |
 
 
 ### Circuit Schematic  
 <a>
-  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/tinkercad.png" width="300"/>
+  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/tinkercad.png" width="800"/>
 </a>
 
 ### Connected Components
 <a>
-  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/hardware1.jpg" width="300"/>
-  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/hardware2.jpg" width="300"/>
-  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/hardware3.jpg" width="300"/>
+  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/image00001.jpeg" width="500"/>
+  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/image00002.jpeg" width="500"/>
+  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/image00003.jpeg" width="500"/>
+  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/image00004.jpeg" width="500"/>
+
 </a>
 
 ## Software Design
@@ -89,9 +91,65 @@ The power supply uses a USB 2.0 A/B cable connected to the laptop, delivering 5V
 ### Development Environment  
 The project is developed using **PlatformIO**, which provides an integrated build system, library manager, and support for multiple boards and frameworks.  
 
-## Results
+### Libraries
+In this project, I used three libraries to manage various components effectively:
+- **LiquidCrystal Library**: In my project, the LiquidCrystal library is responsible for managing the 16x2 LCD, which displays the alarm settings, countdown, and other information.
+- **Adafruit_NeoPixel Library**: In my intelligent mirror project, the NeoPixel library is used to manage the LED strip surrounding the mirror. It creates visual effects and provides illumination by controlling each LED's RGB values independently.
+- **PCM Library**: In the project, the PCM library is used to play sound effects and alarm tones through the speaker, adding auditory feedback and enhancing user interaction. The sounds were edited and optimized in Audacity before being implemented.
 
+### Audio Integration using Audacity and EncodeAudio.exe
+To integrate sound into the project, I started with an MP3 version of the desired audio file. Using Audacity I converted the file into a 16-bit PCM format with an 8000 Hz sampling frequency to ensure compatibility with the Arduino and PCM library. Afterward, I utilized an audio encoder tool to convert the audio into a numeric array format required by the code. The generated data was then copied directly to the clipboard and integrated into the Arduino sketch, allowing the speaker to play the processed sound seamlessly.
+
+### Sensor Calibration
+To ensure accurate motion detection, I calibrated the PIR sensor by introducing a 60-second delay in the setup phase of the Arduino code. This delay allows the sensor to stabilize and adjust to the ambient environment, reducing false triggers and ensuring reliable performance during operation.
+
+### Project Structure
+1. Included Libraries: LiquidCrystal, Adafruit_NeoPixel, PCM and Arduino.h.
+2. Pin Definitions: LCD Pins, Sensor Pin, LED Strip Pin, Speaker Pin and Button Pins.
+3. Sound Data: Alarm Sound and Music.
+4. Global Variables: Toggle Flags, Debounce Variables, Timer Variables and State Variables.
+5. Functions: 
+- toggleMusic(): A function that handles the toggling of music play state when the music button is pressed.
+- playSound(): Plays a given sound on the speaker by generating tones.
+- playMusic(): Starts the music playback using playSound().
+- stopMusic(): Stops the music and playback.
+- turnOnLedStrip(): Turns on the LED strip with a white color.
+- turnOffLedStrip(): Turns off the LED strip.
+- alarmLedAnimation(): Creates an animation with the LED strip for the alarm state (using pink, blue, and purple colors).
+- debounceButton(): A function for debouncing button presses to prevent multiple triggers.
+- selectTimeForAlarm(): Allows the user to cycle through different alarm time options using button presses.
+- toggleAlarm(): Toggles the alarm state between start and stop.
+- startAlarm(): Starts the alarm, based on the selected time.
+- stopAlarm(): Stops the alarm and resets its state.
+- runAlarm(): Runs the alarm logic, updating the display and checking if the alarm time has expired.
+6. Setup Function: Serial Communication, LCD Initialization, Button Initialization, LED Strip Initialization, Sensor Initialization and Initial Display.
+7. Loop Function: Motion Detection, Button Handling, Alarm Control, Music Control and Alarm Running.
+
+### Lab Functionalities in the Project
+**Debugging with Serial Communication:** I used serial communication for debugging, as learned in the lab. This allowed me to monitor the system's behavior in real-time, identify potential errors, and track the status of alarms and music.
+
+**Interrupts for Button Presses:** Interrupts were used to handle button presses, as demonstrated in the lab. The buttons for starting/stopping the alarm and for controlling the music are configured to trigger interrupts. This allows the program to respond immediately when a button is pressed, without continuously checking the button state in the main loop. 
+
+**Timers for Alarm:** Timers, as taught in the lab, were used to implement a timing mechanism for the alarm. The system tracks the remaining time for the alarm to sound, updating the display and triggering actions accordingly.
+
+**GPIO Pins for Connections:** As part of the project, I used General Purpose Input/Output (GPIO) pins for connecting various components, such as the motion sensor, buttons, LED strip, and speaker.
+
+## Results
+The project successfully achieved the intended functionality, with all components working to create an interactive mirror. The results of the implementation are as follows:
+- **Motion Detection and LED Control:** The motion sensor correctly detects motion and activates the LED strip.
+  
+- **Alarm System:** The alarm system works as expected, with the ability to set various timers (7 seconds, 5 minutes, and 10 minutes). The alarm is triggered based on the selected timer and runs for the specified duration. When the alarm time is completed, the system automatically stops the alarm and provides feedback to the user via both the LCD and sound. The alarm LED animation successfully plays different colors in a sequence to provide visual alerts.
+  
+- **Music Playback:** The music control feature functions correctly. Pressing the dedicated button toggles the music state between playing and stopped. The system uses a speaker to play a predefined song.
+  
+- **Button Interaction and Interrupts:** The interrupt-driven button press mechanism works reliably. The buttons used for starting/stopping the alarm and toggling the music respond instantly to presses, and debounce functionality ensures that button presses are registered without noise or false triggering.
+  
+- **Display Feedback:** The LCD correctly displays messages to inform the user about the system's status. This includes showing the time remaining for the alarm, the selected timer, and messages for starting or stopping the alarm. The display also shows system status messages, such as "Hello, World!" during initialization and "Alarm Stopped!" when the alarm is deactivated.
+
+- **Overall System Performance:** The system operates smoothly, with minimal delays and interruptions. All components, including the sensor, LEDs, speaker, and buttons, function together as expected.
+  
 ## Conclusions
+The **Intelligent Mirror** project successfully integrates various technologies and concepts learned in the lab.
 
 ## Source Code
 ### Directory Structure  
@@ -106,7 +164,14 @@ The project is developed using **PlatformIO**, which provides an integrated buil
 
 **12/17/2024**: Completed the circuit schematic, block diagram, and detailed hardware description for the documentation.
 
-## Bibliography/Resources
+**1/1/2025**: I finalized the hardware assembly, soldering the pins to the LED strip and ensuring all connections were secure. After completing the assembly, I tested the LED strip and the entire hardware setup to confirm everything functions correctly.
 
+**1/4/2025**: I implemented and tested the code for the PIR sensor, ensuring it detects motion correctly, and also verified the functionality of the buttons.
+
+**1/6/2025**: I implemented the code for the speaker to work with the previously configured alarm button. Additionally, I used Audacity to adjust and optimize the sound before playing it through the speaker.
+
+## Bibliography/Resources
+1. https://highlowtech.org/?p=1963
+2. https://www.youtube.com/watch?v=tNNycZpvg-Y&ab_channel=AndrobotTECH
 ## License
 This project is licensed under the [MIT License](./LICENSE).
