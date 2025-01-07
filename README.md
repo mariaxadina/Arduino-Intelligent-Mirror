@@ -123,6 +123,15 @@ To ensure accurate motion detection, I calibrated the PIR sensor by introducing 
 6. Setup Function: Serial Communication, LCD Initialization, Button Initialization, LED Strip Initialization, Sensor Initialization and Initial Display.
 7. Loop Function: Motion Detection, Button Handling, Alarm Control, Music Control and Alarm Running.
 
+### Lab Functionalities in the Project
+**Debugging with Serial Communication:** I used serial communication for debugging, as learned in the lab. This allowed me to monitor the system's behavior in real-time, identify potential errors, and track the status of alarms and music.
+
+**Interrupts for Button Presses:** Interrupts were used to handle button presses, as demonstrated in the lab. The buttons for starting/stopping the alarm and for controlling the music are configured to trigger interrupts. This allows the program to respond immediately when a button is pressed, without continuously checking the button state in the main loop. 
+
+**Timers for Alarm:** Timers, as taught in the lab, were used to implement a timing mechanism for the alarm. The system tracks the remaining time for the alarm to sound, updating the display and triggering actions accordingly.
+
+**GPIO Pins for Connections:** As part of the project, I used General Purpose Input/Output (GPIO) pins for connecting various components, such as the motion sensor, buttons, LED strip, and speaker.
+
 ## Results
 
 ## Conclusions
