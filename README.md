@@ -106,7 +106,11 @@ The project is developed using **PlatformIO**, which provides an integrated buil
 
 **12/17/2024**: Completed the circuit schematic, block diagram, and detailed hardware description for the documentation.
 
-**1/1/2025**: I finalized the hardware assembly, soldering the pins to the LED strip and ensuring all connections were secure. After completing the assembly, I tested the LED strip and the entire hardware setup to confirm everything functions correctly
+**1/1/2025**: I finalized the hardware assembly, soldering the pins to the LED strip and ensuring all connections were secure. After completing the assembly, I tested the LED strip and the entire hardware setup to confirm everything functions correctly.
+
+**1/4/2025**: I implemented and tested the code for the PIR sensor, ensuring it detects motion correctly, and also verified the functionality of the buttons.
+
+**1/6/2025**: I implemented the code for the speaker to work with the previously configured alarm button. Additionally, I used Audacity to adjust and optimize the sound before playing it through the speaker.
 
 ## Bibliography/Resources
 1. https://highlowtech.org/?p=1963
