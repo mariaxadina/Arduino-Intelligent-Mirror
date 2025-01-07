@@ -98,6 +98,31 @@ In this project, I used three libraries to manage various components effectively
 ### Audio Integration using Audacity and EncodeAudio.exe
 To integrate sound into the project, I started with an MP3 version of the desired audio file. Using Audacity I converted the file into a 16-bit PCM format with an 8000 Hz sampling frequency to ensure compatibility with the Arduino and PCM library. Afterward, I utilized an audio encoder tool to convert the audio into a numeric array format required by the code. The generated data was then copied directly to the clipboard and integrated into the Arduino sketch, allowing the speaker to play the processed sound seamlessly.
 
+### Sensor Calibration
+To ensure accurate motion detection, I calibrated the PIR sensor by introducing a 60-second delay in the setup phase of the Arduino code. This delay allows the sensor to stabilize and adjust to the ambient environment, reducing false triggers and ensuring reliable performance during operation.
+
+### Project Structure
+1. Included Libraries: LiquidCrystal, Adafruit_NeoPixel, PCM and Arduino.h.
+2. Pin Definitions: LCD Pins, Sensor Pin, LED Strip Pin, Speaker Pin and Button Pins.
+3. Sound Data: Alarm Sound and Music.
+4. Global Variables: Toggle Flags, Debounce Variables, Timer Variables and State Variables.
+5. Functions: 
+- toggleMusic(): A function that handles the toggling of music play state when the music button is pressed.
+- playSound(): Plays a given sound on the speaker by generating tones.
+- playMusic(): Starts the music playback using playSound().
+- stopMusic(): Stops the music and playback.
+- turnOnLedStrip(): Turns on the LED strip with a white color.
+- turnOffLedStrip(): Turns off the LED strip.
+- alarmLedAnimation(): Creates an animation with the LED strip for the alarm state (using pink, blue, and purple colors).
+- debounceButton(): A function for debouncing button presses to prevent multiple triggers.
+- selectTimeForAlarm(): Allows the user to cycle through different alarm time options using button presses.
+- toggleAlarm(): Toggles the alarm state between start and stop.
+- startAlarm(): Starts the alarm, based on the selected time.
+- stopAlarm(): Stops the alarm and resets its state.
+- runAlarm(): Runs the alarm logic, updating the display and checking if the alarm time has expired.
+6. Setup Function: Serial Communication, LCD Initialization, Button Initialization, LED Strip Initialization, Sensor Initialization and Initial Display.
+7. Loop Function: Motion Detection, Button Handling, Alarm Control, Music Control and Alarm Running.
+
 ## Results
 
 ## Conclusions
