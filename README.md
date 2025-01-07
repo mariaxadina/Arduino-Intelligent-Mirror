@@ -133,8 +133,21 @@ To ensure accurate motion detection, I calibrated the PIR sensor by introducing 
 **GPIO Pins for Connections:** As part of the project, I used General Purpose Input/Output (GPIO) pins for connecting various components, such as the motion sensor, buttons, LED strip, and speaker.
 
 ## Results
+The project successfully achieved the intended functionality, with all components working to create an interactive mirror. The results of the implementation are as follows:
+- **Motion Detection and LED Control:** The motion sensor correctly detects motion and activates the LED strip.
+  
+- **Alarm System:** The alarm system works as expected, with the ability to set various timers (7 seconds, 5 minutes, and 10 minutes). The alarm is triggered based on the selected timer and runs for the specified duration. When the alarm time is completed, the system automatically stops the alarm and provides feedback to the user via both the LCD and sound. The alarm LED animation successfully plays different colors in a sequence to provide visual alerts.
+  
+- **Music Playback:** The music control feature functions correctly. Pressing the dedicated button toggles the music state between playing and stopped. The system uses a speaker to play a predefined song.
+  
+- **Button Interaction and Interrupts:** The interrupt-driven button press mechanism works reliably. The buttons used for starting/stopping the alarm and toggling the music respond instantly to presses, and debounce functionality ensures that button presses are registered without noise or false triggering.
+  
+- **Display Feedback:** The LCD correctly displays messages to inform the user about the system's status. This includes showing the time remaining for the alarm, the selected timer, and messages for starting or stopping the alarm. The display also shows system status messages, such as "Hello, World!" during initialization and "Alarm Stopped!" when the alarm is deactivated.
 
+- **Overall System Performance:** The system operates smoothly, with minimal delays and interruptions. All components, including the sensor, LEDs, speaker, and buttons, function together as expected.
+  
 ## Conclusions
+The **Intelligent Mirror** project successfully integrates various technologies and concepts learned in the lab.
 
 ## Source Code
 ### Directory Structure  
