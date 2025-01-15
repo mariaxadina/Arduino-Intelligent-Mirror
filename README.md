@@ -59,17 +59,20 @@ The power supply uses a USB 2.0 A/B cable connected to the laptop, delivering 5V
 ## Hardware Design 
 ### Bill of Materials (BOM)
 
-| Component              | Quantity | Description                              | Datasheet                                                                                 |
+| Component              | Quantity | Description                              | Datasheet                                                                                       |
 |------------------------|----------|------------------------------------------|-------------------------------------------------------------------------------------------------|
-| Breadboard             | 1        | Standard breadboard                      | https://components101.com/sites/default/files/component_datasheet/Breadboard%20Datasheet.pdf          |
+| Breadboard             | 1        | Standard breadboard                      | https://components101.com/sites/default/files/component_datasheet/Breadboard%20Datasheet.pdf    |
 | Jumper Wires (Cables)  | -        | Male-to-female wires                     | https://www.mouser.com/c/ds/tools-supplies/prototyping-products/jumper-wires/?srsltid=AfmBOopanPWOk8Ukw1_juN3MPRRptIMeLviuPscUZNwjSLqPMhHw0F-X|
-| Arduino ATmega328P     | 1        | Microcontroller board                    | https://www.alldatasheet.com/datasheet-pdf/view/241077/ATMEL/ATMEGA328P.html |
-| Potentiometer          | 1        | 10k Ohm potentiometer                    | https://components101.com/sites/default/files/component_datasheet/potentiometer%20datasheet.pdf                         |
-| Push Buttons           | 3        | Buttons with pull-up resistance          | https://components101.com/sites/default/files/component_datasheet/Push-Button.pdf                 |
-| Resistors (1kΩ)        | 3        | 1k Ohm resistors                         |                                       -                                      |
-| Resistors (330Ω)       | 1        | 330 Ohm resistor                         |                                       -                                    |
-| LCD 16x2               | 1        | Character display                        | https://components101.com/sites/default/files/component_datasheet/16x2%20LCD%20Datasheet.pdf                               |
-| PIR Sensor             | 1        | Motion detection sensor                  | https://components101.com/sites/default/files/component_datasheet/Push-Button.pdf                |
+| Arduino ATmega328P     | 1        | Microcontroller board                    | https://www.alldatasheet.com/datasheet-pdf/view/241077/ATMEL/ATMEGA328P.html                    |
+| Potentiometer          | 1        | 10k Ohm potentiometer                    | https://components101.com/sites/default/files/component_datasheet/potentiometer%20datasheet.pdf |
+| Push Buttons           | 3        | Buttons with pull-up resistance          | https://components101.com/sites/default/files/component_datasheet/Push-Button.pdf               |
+| Resistors (1kΩ)        | 3        | 1k Ohm resistors                         |                                       -                                                         |
+| Resistors (330Ω)       | 1        | 330 Ohm resistor                         |                                       -                                                         |
+| LCD 16x2               | 1        | Character display                        | https://components101.com/sites/default/files/component_datasheet/16x2%20LCD%20Datasheet.pdf    |
+| PIR Sensor             | 1        | Motion detection sensor                  | https://components101.com/sites/default/files/component_datasheet/Push-Button.pdf               |
+| 9V Battery             | 1        | Portable power source                    | https://www.farnell.com/datasheets/1842389.pdf                                                  |
+| Warwick 9V Battery Clip| 1        | Convenient connector                     |                                        -                                                        |
+| 8 Ohm 0.5 W Speaker    | 1        | Audio output device                      |https://www.verical.com/datasheet/adafruit-speakers-1890-4292980.pdf?srsltid=AfmBOoqh8d7QvKfPEunbL7mZLFy78uGA7sLrATxcLboLpD3B0acp8ZGM|
 
 
 ### Circuit Schematic  
@@ -103,16 +106,22 @@ To integrate sound into the project, I started with an MP3 version of the desire
 ### Sensor Calibration
 To ensure accurate motion detection, I calibrated the PIR sensor by introducing a 60-second delay in the setup phase of the Arduino code. This delay allows the sensor to stabilize and adjust to the ambient environment, reducing false triggers and ensuring reliable performance during operation.
 
+### Custom Characters using DeepBlueEmbedded
+To create custom emojis for the LCD, I used the [DeepBlueEmbedded Custom Character Generator](https://deepbluembedded.com/lcd-custom-character-generator/). This tool simplifies the process of designing and generating the byte arrays required for custom characters on an LCD.
+
 ### Project Structure
 1. Included Libraries: LiquidCrystal, Adafruit_NeoPixel, PCM and Arduino.h.
 2. Pin Definitions: LCD Pins, Sensor Pin, LED Strip Pin, Speaker Pin and Button Pins.
-3. Sound Data: Alarm Sound and Music.
-4. Global Variables: Toggle Flags, Debounce Variables, Timer Variables and State Variables.
-5. Functions: 
+3. Arrays of custom characters.
+4. Sound Data: Alarm Sound and Music.
+5. Global Variables: Toggle Flags, Debounce Variables, Timer Variables and State Variables.
+6. Functions: 
+- emojiPattern(): Creates a dynamic pattern of custom characters on an LCD screen.
 - toggleMusic(): A function that handles the toggling of music play state when the music button is pressed.
 - playSound(): Plays a given sound on the speaker by generating tones.
 - playMusic(): Starts the music playback using playSound().
 - stopMusic(): Stops the music and playback.
+- handleMusicPlayback(): Manages the playback of the song.
 - turnOnLedStrip(): Turns on the LED strip with a white color.
 - turnOffLedStrip(): Turns off the LED strip.
 - alarmLedAnimation(): Creates an animation with the LED strip for the alarm state (using pink, blue, and purple colors).
@@ -122,8 +131,8 @@ To ensure accurate motion detection, I calibrated the PIR sensor by introducing 
 - startAlarm(): Starts the alarm, based on the selected time.
 - stopAlarm(): Stops the alarm and resets its state.
 - runAlarm(): Runs the alarm logic, updating the display and checking if the alarm time has expired.
-6. Setup Function: Serial Communication, LCD Initialization, Button Initialization, LED Strip Initialization, Sensor Initialization and Initial Display.
-7. Loop Function: Motion Detection, Button Handling, Alarm Control, Music Control and Alarm Running.
+7. Setup Function: Serial Communication, LCD Initialization, Button Initialization, LED Strip Initialization, Sensor Initialization and Initial Display.
+8. Loop Function: Motion Detection, Button Handling, Alarm Control, Music Control and Alarm Running.
 
 ### Lab Functionalities in the Project
 **Debugging with Serial Communication:** I used serial communication for debugging, as learned in the lab. This allowed me to monitor the system's behavior in real-time, identify potential errors, and track the status of alarms and music.
@@ -170,8 +179,15 @@ The **Intelligent Mirror** project successfully integrates various technologies 
 
 **1/6/2025**: I implemented the code for the speaker to work with the previously configured alarm button. Additionally, I used Audacity to adjust and optimize the sound before playing it through the speaker.
 
+**1/9/2025**: I connected a battery to power up the project.
+
+**1/14/2025**: I created custom characters using Generator and displayed them on LCD using a pattern.
+
+**1/15/2025**: Final project adjustments of software and documentation.
+
 ## Bibliography/Resources
 1. https://highlowtech.org/?p=1963
 2. https://www.youtube.com/watch?v=tNNycZpvg-Y&ab_channel=AndrobotTECH
+3. https://arduinointro.com/articles/projects/create-custom-characters-for-the-i2c-lcd-easily
 ## License
 This project is licensed under the [MIT License](./LICENSE).
