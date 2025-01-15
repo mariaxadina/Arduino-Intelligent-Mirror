@@ -185,5 +185,6 @@ The **Intelligent Mirror** project successfully integrates various technologies 
 ## Bibliography/Resources
 1. https://highlowtech.org/?p=1963
 2. https://www.youtube.com/watch?v=tNNycZpvg-Y&ab_channel=AndrobotTECH
+3. https://arduinointro.com/articles/projects/create-custom-characters-for-the-i2c-lcd-easily
 ## License
 This project is licensed under the [MIT License](./LICENSE).
