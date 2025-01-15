@@ -72,6 +72,7 @@ The power supply uses a USB 2.0 A/B cable connected to the laptop, delivering 5V
 | PIR Sensor             | 1        | Motion detection sensor                  | https://components101.com/sites/default/files/component_datasheet/Push-Button.pdf               |
 | 9V Battery             | 1        | Portable power source                    | https://www.farnell.com/datasheets/1842389.pdf                                                  |
 | Warwick 9V Battery Clip| 1        | Convenient connector                     |                                        -                                                        |
+| 8 Ohm 0.5 W Speaker    | 1        | Audio output device                      |https://www.verical.com/datasheet/adafruit-speakers-1890-4292980.pdf?srsltid=AfmBOoqh8d7QvKfPEunbL7mZLFy78uGA7sLrATxcLboLpD3B0acp8ZGM|
 
 
 ### Circuit Schematic  
