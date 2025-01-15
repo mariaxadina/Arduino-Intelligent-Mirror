@@ -185,8 +185,11 @@ The **Intelligent Mirror** project successfully integrates various technologies 
 
 **1/15/2025**: Final project adjustments of software and documentation.
 
-#### Demo
+#### See It in Action
+Watch the demo video to see how the project works and explore its features in action!
+
 [Watch Demo Video](https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/DemoVideo.mp4)
+
 [Watch Demo Video with Sensor](https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/DemoSensorAndFunctions.mp4)
 ## Bibliography/Resources
 1. https://highlowtech.org/?p=1963
