@@ -83,7 +83,7 @@ The power supply uses a USB 2.0 A/B cable connected to the laptop, delivering 5V
 ### Connected Components
 <a>
   <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/image00001.jpeg" width="500"/>
-  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/image00002.jpeg" width="500"/>
+  <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/image_w_battery.jpeg" width="500"/>
   <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/image00003.jpeg" width="500"/>
   <img src="https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/image00004.jpeg" width="500"/>
 
@@ -185,6 +185,8 @@ The **Intelligent Mirror** project successfully integrates various technologies 
 
 **1/15/2025**: Final project adjustments of software and documentation.
 
+#### Demo
+[Watch Demo Video](https://github.com/mariaxadina/Intelligent-Mirror/blob/main/images/DemoSensorAndFunctions.mp4)
 ## Bibliography/Resources
 1. https://highlowtech.org/?p=1963
 2. https://www.youtube.com/watch?v=tNNycZpvg-Y&ab_channel=AndrobotTECH
