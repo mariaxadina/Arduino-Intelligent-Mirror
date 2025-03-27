@@ -13,7 +13,7 @@
     
  ## Introduction
  
- This project is an intelligent mirror that lights up upon detecting movement and offers various functionalities such as LED lighting, an alarm-setting mode, inspirational emojis displayed on an LCD, and music played through a buzzer. The main goal is to create a smart, multifunctional mirror that enhances daily routines by combining practicality and motivation in one device. 
+ This project is an intelligent mirror that lights up upon detecting movement and offers various functionalities such as LED lighting, an alarm-setting mode, inspirational emojis displayed on an LCD, and music played through a speaker. The main goal is to create a smart, multifunctional mirror that enhances daily routines by combining practicality and motivation in one device. 
  
  The idea originated from the desire to merge technology with everyday objects, transforming a simple mirror into a useful and interactive tool. This project is beneficial for others by offering a modern, functional home accessory that makes mornings more efficient and motivating.
 
